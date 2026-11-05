@@ -1,0 +1,107 @@
+general:
+    verbose: 1
+    cluster:
+        index: 0
+        maxMag: 50.0
+        minMag: -50.0
+        priors:
+            means:
+                Av: 0.16
+                Fe_H: -0.32
+                Y: 0.29
+                carbonicity: 0.38
+                distMod: 13.0
+                logAge: 9.5
+            sigmas:
+                Av: 0.1
+                Fe_H: 0.1
+                Y: 0
+                carbonicity: 0
+                distMod: 1.0
+                logAge: .inf
+        starting:
+            Av: 0.16
+            Fe_H: -0.32
+            Y: 0.29
+            carbonicity: 0.38
+            distMod: 13.0
+            logAge: 9.5
+    files:
+        backend: 0
+        modelDirectory: "/Users/daisymatthews/base9/base-cpp-9.6.0/base-models/"
+        outputFileBase: "NGC_2243_test"
+        photFile: "NGC_2243.phot"
+        scatterFile: ""
+    main_sequence:
+        modelFile: "MIST/eep"
+    verbose: 1
+    white_dwarfs:
+        M_wd_up: 8.0
+        ifmr: 12
+        wdAtmosphereModel: 0
+        wdModel: 4
+makeCMD:
+makeIsochrone:
+multiPopMcmc:
+    YA_hi: 0.3
+    YA_lo: 0.2
+    YA_start: 0.2467
+    YB_hi: 0.4
+    YB_start: 0.33
+    lambdaStep: 0.001
+    lambda_start: 0.5
+sampleMass:
+    burnIters: 10000
+    deltaMass: 0.1
+    deltaMassRatio: 0.01
+    iters: 10000
+sampleWDMass:
+scatterCluster:
+    brightLimit: -10
+    crowded: false
+    exposures:
+        B: 1
+        F435W: 1
+        F475W: 1
+        F555W: 1
+        F606W: 1
+        F625W: 1
+        F775W: 1
+        F814W: 1
+        H: 1
+        I: 1
+        J: 1
+        K: 1
+        R: 1
+        U: 1
+        UVf275w: 1
+        UVf336w: 1
+        UVf438w: 1
+        V: 1
+    faintLimit: 30
+    limitS2N: 1
+    relevantFilt: 0
+simCluster:
+    nBrownDwarfs: 0
+    nFieldStars: 0
+    nStars: 500
+    percentBinary: 0
+    percentDB: 0
+singlePopMcmc:
+    adaptive:
+        bigStepIter: 100
+        trialIter: 100
+    runIter: 30000
+    stage2IterMax: 2000
+    stage3Iter: 1000
+    stepSizes:
+        Av: 0.01
+        Fe_H: 0.01
+        Y: 0.01
+        age: 0.01
+        carbonicity: 0.01
+        distMod: 0.01
+        ifmrIntercept: 0.01
+        ifmrQuadCoef: 0.008
+        ifmrSlope: 0.008
+    thin: 1
